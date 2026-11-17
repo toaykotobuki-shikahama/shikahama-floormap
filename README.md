@@ -7,20 +7,22 @@
 
 ## 公開ページ
 
+- 入口（A館・B館を選ぶ）：https://toaykotobuki-shikahama.github.io/shikahama-floormap/
 - A館：https://toaykotobuki-shikahama.github.io/shikahama-floormap/shikahama-a.html
 - B館：https://toaykotobuki-shikahama.github.io/shikahama-floormap/shikahama-b.html
 
-## このリポジトリに置くファイル（5つ）
+## このリポジトリに置くファイル（6つ）
 
 | ファイル | 内容 |
 | --- | --- |
 | README.md | この説明 |
+| index.html | 入口のページ（A館・B館を選ぶ）。通常は更新しない |
 | shikahama-a.html | A館のフロアマップ（Webページ） |
 | shikahama-a.png | A館のフロアマップ（画像） |
 | shikahama-b.html | B館のフロアマップ（Webページ） |
 | shikahama-b.png | B館のフロアマップ（画像） |
 
-上の5つ以外のファイルは置かないでください。
+上の6つ以外のファイルは置かないでください。
 
 ## 更新の手順
 
@@ -31,7 +33,7 @@
 
 ## 更新後の確認
 
-- [ ] ファイルが5つのままか（増えていたら名前違い。余計なファイルはすぐ削除する）
+- [ ] ファイルが6つのままか（増えていたら名前違い。余計なファイルはすぐ削除する）
 - [ ] 公開ページを開き、日付と新台が今回の内容になっているか（反映まで1分ほどかかる。古いままなら再読み込み）
 
 ## 注意
@@ -39,3 +41,4 @@
 - 社内用のファイル（SVG、PDF、配置図のExcel、機種マスタのCSV）は置かない
 - 一度コミットしたファイルは、上書きや削除をしても履歴に残り、誰でも見られる。上げる前に、公開してよいファイルか確認する
 - 間違えて公開した場合は、コミットの履歴から前の版に戻せる
+
