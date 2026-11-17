@@ -7,8 +7,8 @@
 
 ## 公開ページ
 
-- A館：https://（アカウント名）.github.io/shikahama-floormap/shikahama-a.html
-- B館：https://（アカウント名）.github.io/shikahama-floormap/shikahama-b.html
+- A館：https://toaykotobuki-shikahama.github.io/shikahama-floormap/shikahama-a.html
+- B館：https://toaykotobuki-shikahama.github.io/shikahama-floormap/shikahama-b.html
 
 ## このリポジトリに置くファイル（5つ）
 
