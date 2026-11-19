@@ -18,6 +18,7 @@
   main { max-width: 560px; margin: 0 auto; padding: 28px 20px 40px; }
   a.hall { display: flex; align-items: center; justify-content: space-between; background: #fff; border: 3px solid #23AC38; border-radius: 16px; padding: 22px 24px; margin-bottom: 16px; color: #1A1A1A; text-decoration: none; font-size: 24px; font-weight: 900; }
   a.hall span { font-size: 15px; font-weight: 700; color: #23AC38; }
+  a.hall .name small { display: block; font-size: 13px; font-weight: 700; color: #555; margin-top: 4px; min-height: 1em; }
   a.hall:active { background: #E5F4E4; }
   .note { font-size: 12px; color: #555; line-height: 1.7; margin-top: 24px; }
 </style>
@@ -28,9 +29,22 @@
   <p>館を選んでください</p>
 </header>
 <main>
-  <a class="hall" href="shikahama-a.html">A館<span>マップを見る ›</span></a>
-  <a class="hall" href="shikahama-b.html">B館<span>マップを見る ›</span></a>
+  <a class="hall" href="shikahama-a.html"><div class="name">A館<small id="date-a"></small></div><span>マップを見る ›</span></a>
+  <a class="hall" href="shikahama-b.html"><div class="name">B館<small id="date-b"></small></div><span>マップを見る ›</span></a>
   <p class="note">機種をタップすると正式名が表示されます。<br>本マップは生成AIを活用して作成しています。実際の配置と異なる場合がありますので、店内表示をご確認ください。</p>
 </main>
+<script>
+// 各館のマップに入っている日付（dateLabel）を読み取って、ボタンに表示する。
+// 読み取れないときは何も表示しない（ボタンはそのまま使える）。
+[['shikahama-a.html', 'date-a'], ['shikahama-b.html', 'date-b']].forEach(([file, id]) => {
+  fetch(file, { cache: 'no-cache' })
+    .then((r) => (r.ok ? r.text() : ''))
+    .then((html) => {
+      const m = html.match(/"dateLabel":"([^"]*)"/);
+      if (m) document.getElementById(id).textContent = m[1];
+    })
+    .catch(() => {});
+});
+</script>
 </body>
 </html>
