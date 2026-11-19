@@ -40,7 +40,7 @@
   fetch(file, { cache: 'no-cache' })
     .then((r) => (r.ok ? r.text() : ''))
     .then((html) => {
-      const m = html.match(/"dateLabel":"([^"]*)"/);
+      const m = html.match(/"dateLabel"\s*:\s*"([^"]*)"/);
       if (m) document.getElementById(id).textContent = m[1];
     })
     .catch(() => {});
